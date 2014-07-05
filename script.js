@@ -29,11 +29,38 @@ $(document).ready(function() {
 	}
 	
 	//shuffle the deck
-	
+	function shuffle(deck) {
+  		var newDeck = [], n = deck.length, i;
+
+  	// While there remain elements to shuffle…
+  	while (n) {
+
+    	// Pick a remaining element…
+    	i = Math.floor(Math.random() * n--);
+
+    	// And move it to the new array.
+    	newDeck.push(deck.splice(i, 1)[0]);
+  		}
+
+  	return newDeck;
+	}
+
+console.log(deck);
+deck = shuffle(deck);
+console.log(deck);
 	
 	var cards_player_1 = [];
 	var cards_player_2 = [];
 	//divide out the cards into the two arrays
+	for (var i = 0; i <deck.length; i++){
+		if (i%2 === 0){
+			cards_player_1.push(deck[i]);
+		}else{
+			cards_player_2.push(deck[i]);
+		}
+	}
+console.log(cards_player_1);
+console.log(cards_player_2);
 	
 	
 	//create a function (algorithm) called "war" that takes two cards as parameters, compares them and returns a winner. A tie should return false.
