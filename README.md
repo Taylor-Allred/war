@@ -13,13 +13,13 @@ When the page loads the cards should be divided equally into each player's pile.
   * There are many ways to do this, try to come up with the easiest, simplest solution (remember, the deck is already shuffled at this point) //edited in script.js, now I have two arrays each with half the deck.
 
 ##Step 3: Create the 'war' algorithm
-Create an algorithm called `war` that determines the winner from a given pair of cards. It should be a function that accepts two cards as parameters, compares the value, and returns a winner. In the case that the cards are a tie, have the algorithm return `false`.
+Create an algorithm called `war` that determines the winner from a given pair of cards. It should be a function that accepts two cards as parameters, compares the value, and returns a winner. In the case that the cards are a tie, have the algorithm return `false`. //Added in War algorithm
 
 ##Step 4: Create the 'play' function 
 When the user clicks the 'Play!' button, your function should play the current pair of cards.
 * The two top cards on each deck should be sent to the war algorithm
 * The winner should receive both cards, which should be placed at the end of his/her deck
-* Call the "advance" function to continue play
+* Call the "advance" function to continue play //Added in functioning play button. Code now works all around.
 
 ##Step 5 (Black Diamond): Account for 'tied' cards
 If there is a tie, the play function should then check the 4th cards from each player's deck and determine the winner, who gets all of the previous cards.
