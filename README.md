@@ -5,12 +5,12 @@ Start of the "war" project (algorithms)
 
 ##Step 1: Shuffle the deck
 Take a look at script.js. Examine what the two for loops do in conjunction with each other. What will the resulting array (`deck`) look like?
-* After the deck is created and filled, randomize it. (hint: there is a quick function in underscore that will help you accomplish this).
+* After the deck is created and filled, randomize it. (hint: there is a quick function in underscore that will help you accomplish this). //edited in script.js to shuffle deck.
 
 ##Step 2: Deal the cards 
 When the page loads the cards should be divided equally into each player's pile. 
   * Write code that will automatically divide out the cards in `deck` between the two players
-  * There are many ways to do this, try to come up with the easiest, simplest solution (remember, the deck is already shuffled at this point)
+  * There are many ways to do this, try to come up with the easiest, simplest solution (remember, the deck is already shuffled at this point) //edited in script.js, now I have two arrays each with half the deck.
 
 ##Step 3: Create the 'war' algorithm
 Create an algorithm called `war` that determines the winner from a given pair of cards. It should be a function that accepts two cards as parameters, compares the value, and returns a winner. In the case that the cards are a tie, have the algorithm return `false`.
