@@ -64,15 +64,35 @@ console.log(cards_player_2);
 	
 	
 	//create a function (algorithm) called "war" that takes two cards as parameters, compares them and returns a winner. A tie should return false.
-	function war() {
+	function war(card1, card2) {
+		if (card1.number > card2.number) {
+			return card1;
+		}
+		else if (card1.number < card2.number){
+			return card2;
+		}else{
+			return false;
+		}
 	}
-	
 	
 	//create a play function
 		//compare the cards
 		//give the winner both cards (at end of deck)
 	function play() {
-		
+		var winningCard = war(cards_player_1[0], cards_player_2[0]);
+		var winner;
+		var loser;
+		if(winningCard ===cards_player_1[0]){
+			cards_player_1.push(cards_player_1.shift(), cards_player_2.shift())
+		}else if(winningCard ===cards_player_2[0]){
+			cards_player_2.push(cards_player_1.shift(), cards_player_2.shift())
+		}else{
+			cards_player_1.push(cards_player_1.shift());
+			cards_player_2.push(cards_player_2.shift());
+		}
+		if(cards_player_1.length === 0||cards_player_2.length === 0){
+			alert("Game Over");
+		}
 		//this function (defined below) will continue to the next turn
 		advance();
 	}
